@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  
+  font-family: 'Fauna One', serif;
+  color: rgb(155, 150, 150);
+  font-size: 25px;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-family: 'Bilbo Swash Caps', cursive;
+}

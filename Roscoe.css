@@ -5,13 +5,20 @@
 }
 
 body {
-  
   font-family: 'Fauna One', serif;
   color: tan;
   font-size: 25px;
-  background-repeat: no-repeat;
+  background-image: url("file:///C:/Users/Dan/OneDrive/Pictures/Digital%20Pix/Roscoe.jpg");
+  background-repeat: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
+background-repeat: no-repeat;
+
+}
 h1 {
   font-family: 'Bilbo Swash Caps', cursive;
 }

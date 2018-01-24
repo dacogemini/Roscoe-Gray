@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jaunt!</title>
+      <!-- JQUERY -->
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+      <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+      <!-- BOOTSTRAP -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+        crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+      <!-- Jumbotron for Title -->
+      <div class="jumbotron" style="background-color: rgb(231, 69, 5) ; color: white;">
+        <h1 class="text-center">
+          <strong>
+            <i class="fas fa-compass fa-2x"></i> <h1>JAUNT!</h1></strong>
+        </h1>
+      </div>
+      <div class="form-group">
+        <label for="search">
+          <h3>What Would You Enjoy? <br><br>
+            &nbsp &nbsp
+            <i class="fas fa-music fa-lg"></i>&nbsp &nbsp &nbsp &nbsp &nbsp 
+            <i class="fas fa-glass-martini fa-lg"></i>&nbsp &nbsp &nbsp &nbsp 
+            <i class="fas fa-birthday-cake fa-lg"></i>&nbsp &nbsp &nbsp &nbsp &nbsp 
+            <i class="fas fa-heart fa-lg" style="color:red;"></i>
+          </h3>
+         &nbsp <button type="button" class="btn btn-dark" id="concert">A Concert</button>
+         &nbsp <button type="button" class="btn btn-dark" id="festival">A Festival</button>
+         &nbsp <button type="button" class="btn btn-dark" id="party">A Party</button>
+         &nbsp <button type="button" class="btn btn-dark" id="v_day">Valentine's Day</button>
+        </label>
+        
+      
+        <div id="info"></div>
+        <div id="venue"></div>
+      </div>
+      <!-- CONCERTS -->
+      <iframe id="show" src="https://allevents.in/plugin/custom-events.php?key=7946c9f3a6" width="450" height="300" style="border:0; width:450px; height:300px;max-width: initial;"></iframe>
+      <!-- FESTIVALS -->
+      <iframe id="fiesta" src="https://allevents.in/plugin/custom-events.php?key=d3cec75d5c" width="450" height="300" style="border:0; width:450px; height:300px;max-width: initial;"></iframe>
+      <!-- PARTIES -->
+      <iframe id="parties" src="https://allevents.in/plugin/custom-events.php?key=0a770f85a6" width="450" height="300" style="border:0; width:450px; height:300px;max-width: initial;"></iframe>
+      <!-- VALENTINES DAY -->
+      <iframe id="special" src="https://allevents.in/plugin/custom-events.php?key=32bb48fc58" width="450" height="300" style="border:0; width:450px; height:300px;max-width: initial;"></iframe>
+      <!-- SCRIPTS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script>
+// DOC READY 
+  $(function () {
+    // HIDE UPON PAGE LOAD
+    $("#show").hide();
+    $("#fiesta").hide();
+    $("#parties").hide();
+    $("#special").hide();
+    // --------------------------------------
+    // ON-CLICK EVENTS
+    // --------------------------------------
+    $("#concert").on("click", function () {  
+        $("#show").show();
+        $("#fiesta").hide();
+        $("#parties").hide();
+        $("#special").hide();
+    // ON-CLICK FESTIVAL
+    $("#festival").on("click", function () {  
+       $("#show").hide();
+       $("#parties").hide();
+       $("#fiesta").show();
+       $("#special").hide();
+    // ON-CLICK PARTIES
+    $("#party").on("click", function () {  
+       $("#show").hide();
+       $("#fiesta").hide();
+       $("#parties").show();
+       $("#special").hide();
+    // ON-CLICK VALENTINES DAY
+    $("#v_day").on("click", function () {  
+       $("#show").hide();
+       $("#fiesta").hide();
+       $("#parties").hide();
+       $("#special").show();  
+    });
+    })
+    })
+  })
+  })
+</script>

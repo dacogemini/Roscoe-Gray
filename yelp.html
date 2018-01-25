@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Yelp Fusion</title>
+
+</head>
+
+<body>
+
+
+
+
+
+    <!-- SCRIPTS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+
+
+
+            var accessToken =
+                "3uLaVQrJwP21kaJjuErLNk5QE9TTtwtFA7LErPkhI32wZg6PYKUll05F-9_fkoK45CnUZ6qyVOXkvHGjRK-9ajm-CtR9J3r7d5zMfcl72IUJbtLy8yUpSZ-uHlpmWnYx"
+
+            var queryURL = "https://api.yelp.com/v3/businesses/search?term=restaurant&location=boulder";
+
+
+
+            $.ajax({
+
+                type: "GET",
+                url: queryURL,
+                dataType: "dataType",
+                headers: {
+                    "Authorization": "Basic " +
+                        "3uLaVQrJwP21kaJjuErLNk5QE9TTtwtFA7LErPkhI32wZg6PYKUll05F-9_fkoK45CnUZ6qyVOXkvHGjRK-9ajm-CtR9J3r7d5zMfcl72IUJbtLy8yUpSZ-uHlpmWnYx"
+                },
+
+
+
+                success: function (response) {
+
+                    console.log(queryURL);
+
+                }
+
+            });
+
+
+
+            /*
+
+                "access_token": "3uLaVQrJwP21kaJjuErLNk5QE9TTtwtFA7LErPkhI32wZg6PYKUll05F-9_fkoK45CnUZ6qyVOXkvHGjRK-9ajm-CtR9J3r7d5zMfcl72IUJbtLy8yUpSZ-uHlpmWnYx",
+
+                "expires_in": 630826370,
+
+                "token_type": "Bearer" */
+
+
+
+        });
+    </script>

@@ -1,0 +1,31 @@
+$(function () {
+    $(document).on("click", function(event){
+        // The city variable will hold the results we get from the user's inputs via HTML
+        var city = $("#userInput").val();
+       
+
+    
+    var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?&city="  
+// AJAX call ----
+    $.ajax({
+        type: "GET",
+        url: queryURL + city + "&apikey=RAJIFQErgEgMNdIAtVrRj7Z6bAWPY0cl",
+        async: true,
+        dataType: "json",
+        success: function (json) {
+            console.log(json);
+        
+        $("#well-section").text(JSON.stringify(json)); 
+            // for loop for json results
+           for (var i=0; i < json.length; i++) {
+               
+           }  
+          
+        },
+            error: function (xhr, status, err) {
+            // This time, we do not end up here!
+            
+            }
+        });
+    })
+})
